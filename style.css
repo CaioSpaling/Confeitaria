@@ -33,5 +33,6 @@ img {
   width: 600px;
   height: 500px;
   object-fit: cover;
+  align-content: center;
 }
 
