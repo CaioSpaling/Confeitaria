@@ -31,8 +31,7 @@ nav ul li {
 
 img {
   width: 200px; 
-  height: 200px; 
-  object-fit: cover;
-  border: 5px solid black;
+  height: 50px; 
+  margin: auto;
 }
 
