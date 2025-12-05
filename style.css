@@ -106,17 +106,26 @@ footer {
     padding: 15px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #fff9f9; /* Um toque de cor de confeitaria */
+    background-color: #fff9f9; 
 }
 
 .item-bolo h3 {
-    color: #8b4513; /* Cor de chocolate */
+    color: #8b4513; 
     margin-top: 0;
     font-size: 1.2em;
 }
 
 .item-bolo p {
     font-weight: bold;
-    color: #4CAF50; /* Cor de preço */
+    color: #4CAF50; 
     font-size: 1.1em;
+}
+
+.bolo-imagem {
+    width: 100%; 
+    height: auto; 
+    max-height: 180px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    margin-bottom: 10px;
 }

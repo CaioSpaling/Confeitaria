@@ -26,6 +26,13 @@ function criarItemCardapio(titulo, descricao, foto) {
 
 const URL_CARDAPIO = "https://confeitaria-api-l3xg.onrender.com/cardapio";
 
+const imagensBolo = {
+    "Bolo Cenoura": "https://i.imgur.com/URL_DA_SUA_IMAGEM_CENOURA.jpg",
+    "Bolo Laranja": "https://i.imgur.com/URL_DA_SUA_IMAGEM_LARANJA.jpg",
+    "Bolo Chocolate": "https://i.imgur.com/URL_DA_SUA_IMAGEM_CHOCOLATE.jpg",
+    "Bolo Morango": "https://i.imgur.com/URL_DA_SUA_IMAGEM_MORANGO.jpg",
+};
+
 async function buscarEExibirCardapio() {
   const container = document.getElementById('cardapio');
   
@@ -62,6 +69,15 @@ function exibirCardapioNoHTML(cardapio, container) {
     const itemBolo = document.createElement('div');
     itemBolo.classList.add('item-bolo');
 
+    const urlImagem = imagensBolo[bolo.nome];
+    if (urlImagem) {
+        const imagem = document.createElement('img');
+        imagem.src = urlImagem;
+        imagem.alt = `Imagem de ${bolo.nome}`;
+        imagem.classList.add('bolo-imagem');
+        itemBolo.appendChild(imagem);
+    }
+    
     const nome = document.createElement('h3');
     nome.textContent = bolo.nome || "Bolo sem nome";
 
@@ -79,4 +95,3 @@ function exibirCardapioNoHTML(cardapio, container) {
 }
 
 document.addEventListener('DOMContentLoaded', buscarEExibirCardapio);
-
