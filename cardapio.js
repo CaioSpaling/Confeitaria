@@ -27,10 +27,9 @@ function criarItemCardapio(titulo, descricao, foto) {
 const URL_CARDAPIO = "https://confeitaria-api-l3xg.onrender.com/cardapio";
 
 const imagensBolo = {
-    "Bolo Cenoura": "https://i.imgur.com/URL_DA_SUA_IMAGEM_CENOURA.jpg",
-    "Bolo Laranja": "https://i.imgur.com/URL_DA_SUA_IMAGEM_LARANJA.jpg",
-    "Bolo Chocolate": "https://i.imgur.com/URL_DA_SUA_IMAGEM_CHOCOLATE.jpg",
-    "Bolo Morango": "https://i.imgur.com/URL_DA_SUA_IMAGEM_MORANGO.jpg",
+    "Bolo de cenoura ": "https://static.itdg.com.br/images/360-240/b2b92774c7fec4a05604e5573ef5a294/365326-original.jpg",
+    "Bolo de fubá": "https://static.itdg.com.br/images/360-240/6e568c96326ae47d7a75bf9d2e96bb60/bolo-de-fuba-simples.jpg",
+    "Bolo Red Velvet": "https://www.estadao.com.br/resizer/qE_Ym-VsxCMh1Ux-Br1m1vUGf9Q=/arc-anglerfish-arc2-prod-estadao/public/NWRHISDZQ5O2TAHNCID5EF3WW4.jpg"
 };
 
 async function buscarEExibirCardapio() {
