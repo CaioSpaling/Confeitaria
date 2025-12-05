@@ -23,9 +23,25 @@ function criarItemCardapio(titulo, descricao, foto) {
     divC.appendChild(divItemCardapio)
 }
 
-criarItemCardapio(
-    'Bolo de Chocolate',
-    'Um classico irresistivel com muitas camadas de chocolate!',
-    'https://www.comidaereceitas.com.br/img/sizeswp/1200x675/2020/05/bolo_chocolate_leite.jpg' 
 
-)
+function carregarCardapio() {
+    fetch('bolos.json')
+        .then(response => {
+            if (!response.ok) { 
+                throw new Error(`Erro HTTP! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(dadosBolos => {
+            dadosBolos.forEach(bolo => {
+                criarItemCardapio(bolo.titulo, bolo.descricao, bolo.foto);
+            });
+        })
+        .catch(error => {
+            console.error('Houve um problema ao carregar o cardápio:', error);
+            
+            document.getElementById('cardapio').innerHTML = '<p>Não foi possível carregar o cardápio no momento. Tente novamente mais tarde.</p>';
+        });
+}
+
+carregarCardapio();
